@@ -2,5 +2,7 @@
 $primary-color: #64ff00;
 
 :export {
-  primaryColor: $primary-color;
+  color: $primary-color;
+  font-family: 'Stick No Bills', sans-serif;
 }
+

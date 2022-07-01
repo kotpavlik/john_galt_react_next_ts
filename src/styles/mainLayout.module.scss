@@ -1,0 +1,21 @@
+.logo_wrapper {
+
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  position: sticky;
+  top:0;
+  background-color: #fff;
+  z-index: 10;
+}
+.link_wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}

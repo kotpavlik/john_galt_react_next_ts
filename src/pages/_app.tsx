@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import variables from '../styles/variables.module.scss'
 import type { AppProps } from 'next/app'
 
 
