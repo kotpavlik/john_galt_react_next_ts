@@ -38,6 +38,9 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Fira Sans";
 }
 
 input,
@@ -89,10 +92,181 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
 .material-icons {
   cursor: pointer;
 }
+.svg-primary path{
+    fill: var(--primary);
+}
+
+.svg-primary-stroke svg path{
+    stroke: transparent;
+}
+.svg-primary-stroke svg path{
+    fill: var(--primary);
+    stroke: var(--primary);
+}
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 2px;
+  border-radius: 0;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: var(--primary);
+}
+.swiper-main .swiper-horizontal>.swiper-pagination-bullets, .swiper-main .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-main .swiper-pagination-custom, .swiper-main .swiper-pagination-fraction{
+    width: auto;
+    left: calc(100vw - 972px + 50px);
+}
+@media screen and (min-width: 1200px){
+    .swiper-main .swiper-horizontal>.swiper-pagination-bullets, .swiper-main .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-main .swiper-pagination-custom, .swiper-main .swiper-pagination-fraction{
+        width: auto;
+        left: calc(100% - 1100px + 50px);
+    }
+}
+@media screen and (max-width: 972px){
+    .swiper-main .swiper-horizontal>.swiper-pagination-bullets, .swiper-main .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-main .swiper-pagination-custom, .swiper-main .swiper-pagination-fraction{
+        width: auto;
+        left: 62px;
+    }
+}
+.ws_slider{
+    position: relative;
+}
+.ws_slider .swiper-horizontal>.swiper-pagination-bullets, .ws_slider .swiper-pagination-bullets.swiper-pagination-horizontal{
+    width: auto;
+    left: 0;
+}
+.ws_slider .swiper-slide > div{
+    height: 330px;
+    margin-top: 70px;
+    position: relative;
+    transition: .3s;
+    transition-delay: .15s;
+}
+
+.ws_slider .swiper-slide-active > div{
+    height: 400px;
+    margin-top: 0;
+}
+
 
 ::-webkit-scrollbar {
   width: 0;
+}
+:root {
+  --text: #1B1B1E;
+  --background: #F1F2F2;
+  --primary: #90A295;
+}
+img{
+    border-radius: 10px;
 }

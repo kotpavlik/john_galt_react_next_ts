@@ -2,20 +2,65 @@
 
 }
 .nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  font-family: "Fira Sans";
+}
+.nav > div {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
+  padding: 62px 0;
   margin: 0 auto;
   font-size: 0.9rem;
-  position: sticky;
-  top:0;
-  background-color: #fff;
+  position: relative;
+  top: 0;
   z-index: 10;
+  max-width: 1200px;
 }
+
 .link_wrapper{
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80%;
+}
+.link_wrapper  div{
+    height: 25px;
+}
+.link_wrapper > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    grid-gap: 8px;
+    font-size: 16px;
+}
+
+.contacts_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    background: var(--background);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+}
+.contacts_wrapper > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    grid-gap: 8px;
+    font-weight: 300;
+
+}
+
+.contacts_wrapper  div{
+    height: 25px;
 }

@@ -1,17 +1,101 @@
 import type { NextPage } from 'next'
 import styles from '../styles/home.module.css'
 import Link from 'next/link';
-import {MainLayout} from '../../layouts /MainLayout';
+import Image from 'next/image';
+import { ReactSVG } from 'react-svg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Pagination } from "swiper";
+import { MainLayout } from '../../layouts /MainLayout';
+import { Contacts } from '../components/Contacts';
+import { Events } from '../components/Events';
+import { Workspaces } from '../components/Workspaces';
+
 
 const Home: NextPage = () => {
-  return (
-      <MainLayout title={'home'}>
-          <div className={styles.container}>
-              <h1>Hello John Galt</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, necessitatibus, veniam? Aut dolor earum eius explicabo facilis, id laborum numquam quidem, quis reiciendis sed, tempora tenetur totam vero voluptates. Accusantium amet corporis, cumque, distinctio, eligendi excepturi laboriosam magni quia quis sequi sit unde voluptatem! Assumenda dignissimos eius enim eos, explicabo laborum mollitia nobis repellendus tempore! Assumenda excepturi facilis quos sit? Dolore iste, modi mollitia neque nihil officia placeat porro praesentium quis, repellat repellendus sunt vitae, voluptas? Accusamus aliquam animi architecto atque autem commodi consectetur consequatur cumque dignissimos explicabo facilis illum, incidunt ipsum iusto laboriosam laborum magni nam nobis non officia officiis pariatur quaerat quas quis quisquam quo quod recusandae sapiente sunt suscipit. Dolore, facilis, praesentium? A, at atque ipsum modi nam officiis voluptas! Beatae deserunt eius explicabo harum modi porro recusandae sit. Accusantium atque autem consectetur corporis, dolores enim error labore minus optio pariatur praesentium, qui quod repudiandae sequi tenetur, ut voluptatum. In iusto nesciunt nisi temporibus. Animi fugit ipsum iure laudantium maxime minima nemo nisi nobis veniam? Animi deleniti excepturi facilis iure mollitia odio quis rem saepe temporibus voluptates? Ab accusantium alias aliquam, amet asperiores aut consequatur culpa distinctio dolor, dolores eligendi enim ex ipsa molestias nam, natus nihil omnis quae quaerat quasi quo reiciendis repellat rerum soluta tempore tenetur ullam. Consequatur distinctio eum excepturi in laboriosam placeat quaerat rem unde. Aut doloribus dolorum error facilis illo in ipsum magni, nemo praesentium, reiciendis, reprehenderit similique tempora tempore voluptas voluptate voluptatem voluptates. Earum inventore vel voluptatum! Alias aliquam aperiam aspernatur atque aut autem beatae commodi consectetur deleniti eaque eius et eveniet excepturi fugiat hic id, iure labore laborum maxime mollitia nihil nostrum numquam, omnis pariatur placeat possimus quam quidem quisquam quod reiciendis repellat reprehenderit tenetur veniam? Atque eligendi exercitationem, laudantium natus odit quibusdam saepe? Ab accusamus architecto, at culpa dolor dolorum excepturi facilis, id iste laborum nam nisi odit quo repudiandae vero! Ab aliquam animi atque blanditiis, dolorum eligendi facilis hic id inventore necessitatibus nisi recusandae rem repellendus sapiente veniam? Alias aliquam amet animi, architecto aspernatur dolor dolores ea est fugit harum natus neque nihil perspiciatis reprehenderit, saepe, similique sit ullam voluptas. Ab, adipisci animi autem consectetur cupiditate delectus dignissimos, dolores eaque eos excepturi magni maxime nam necessitatibus officiis pariatur quam quia similique? Iste minima nam necessitatibus suscipit totam! Accusamus beatae cupiditate, deserunt dicta dolorem eligendi esse est hic illo iste magni maiores minus nam nemo nihil odio officia perferendis possimus provident quaerat saepe sequi soluta suscipit temporibus totam ut, voluptate voluptates? Accusamus ad autem beatae blanditiis consectetur dignissimos distinctio dolorem eius esse et facilis id impedit iste magnam modi molestias necessitatibus nisi non perspiciatis quae, quaerat quam quasi quia quos reiciendis saepe sit tenetur totam vel vero? Culpa dolores, fuga, fugiat inventore iure laborum magnam modi molestiae necessitatibus nemo quaerat quam quisquam sunt? Architecto dolore harum quis ullam. Deserunt dignissimos, explicabo ipsam labore nemo nostrum nulla numquam quos similique veniam. A assumenda blanditiis consectetur dignissimos, distinctio ea ex explicabo facilis harum hic ipsum itaque minus modi molestias necessitatibus odio perferendis perspiciatis possimus similique sint sit soluta sunt tempore totam unde veritatis voluptatibus. Dolor fuga itaque minima quas quisquam. Animi aut autem corporis culpa, delectus dolorem dolorum ea, eveniet exercitationem facilis illo laboriosam nemo nobis praesentium quasi quia quod repellendus unde velit voluptate! Assumenda ea error, natus omnis placeat quos ratione reiciendis! Est iure nesciunt possimus quisquam saepe. Accusamus ad aut, autem, dicta distinctio dolorum eveniet ex iusto labore nemo neque nisi nulla quisquam quod ratione unde vero. Adipisci aliquam, deleniti doloribus facilis laboriosam necessitatibus nesciunt sapiente. Aliquid animi aperiam delectus deserunt dicta enim, et exercitationem illo incidunt inventore maxime minus nobis obcaecati odit quam sunt totam voluptatem? Animi dolore eaque molestiae nisi sed veniam voluptates. Adipisci alias amet asperiores aut consequatur cupiditate dignissimos eaque esse facilis fuga impedit ipsa itaque magni maxime molestiae mollitia natus nemo nobis nostrum odit optio porro quasi quidem quis quo sequi soluta tempora, ullam ut vel veniam vitae voluptatibus voluptatum! Adipisci fugiat minus molestiae nesciunt odit quas reiciendis tempore voluptas. Blanditiis consequuntur culpa cumque dolorem eaque eius error eveniet fugiat in labore laudantium minima modi necessitatibus nesciunt nostrum omnis optio, possimus, ratione reprehenderit sed suscipit, unde vitae voluptatem. Asperiores at aut dicta, dignissimos dolor dolore dolores enim facilis fugiat iure magnam magni minima minus natus officia perspiciatis quas quibusdam quos repellendus sapiente, sequi sint, vel. Accusantium assumenda blanditiis, commodi cum deleniti deserunt dolores ducimus eius eos excepturi explicabo fugiat id ipsam laboriosam magnam minima nemo neque non odit quas quibusdam quis quisquam repellat sequi sunt tempore tenetur voluptates. Animi aut debitis deserunt et impedit quidem, quod temporibus vero voluptate. Accusantium consectetur dolorem fuga illum perferendis! Assumenda aut culpa deserunt facere iusto praesentium, quisquam ullam unde vel voluptas! Adipisci animi aperiam architecto dolor ducimus eaque eius ex impedit inventore ipsum itaque labore magni minus nemo officia pariatur, quas qui, rem similique totam! A asperiores consequuntur deserunt doloremque dolores doloribus eligendi eos est eum eveniet, excepturi fuga impedit laboriosam laborum maiores maxime modi necessitatibus nostrum odio officiis porro possimus sapiente soluta suscipit, tempora tempore, tenetur ut vel veniam voluptatum! Beatae consequatur deleniti doloremque enim id illum ipsa magnam mollitia natus neque nihil nisi, perspiciatis porro rem sed vel voluptas! A ad assumenda consequatur cupiditate dicta ducimus fugiat impedit iure labore nulla perferendis, repudiandae sit totam voluptates voluptatum? Adipisci aliquid architecto at, atque autem beatae blanditiis consequatur cupiditate debitis deleniti distinctio dolorum earum enim, exercitationem facere facilis iure laborum libero maxime necessitatibus nulla odio officia pariatur perferendis praesentium quo quod repellat reprehenderit rerum similique ullam vero voluptatem voluptatibus? Est id natus nisi omnis, perspiciatis reprehenderit repudiandae sit! Accusamus beatae consequatur dolores illum necessitatibus nisi numquam ratione totam voluptatem. A ad aperiam autem commodi, consequuntur cum doloribus et, fuga fugit inventore ipsum iste nihil obcaecati odit officia officiis possimus! A accusamus architecto asperiores at corporis dignissimos enim illo iusto libero minus, molestias natus nisi officia perspiciatis placeat quisquam recusandae, soluta suscipit tempora totam ullam voluptate voluptatibus voluptatum! Aut ipsum, iste nesciunt quaerat sed sit tenetur. Magnam, minus, sunt.</p>
-          </div>
-      </MainLayout>
-  )
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+    };
+
+    return (
+    <MainLayout title={'home'}>
+    <div className={styles.container}>
+        <div className={styles.headerContainer}>
+        <Swiper
+          className="swiper-main"
+          spaceBetween={0}
+          slidesPerView={1}
+          style={{height: "100vh"}}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          pagination={pagination}
+          modules={[Pagination]}
+        >
+          <SwiperSlide>
+            <div className={styles.headerImgContainer}>
+                <div >
+                  <Image
+                      style={{borderRadius: "0 0 10px 10px"}}
+                      src="/images/headerbg.png"
+                      layout="fill"
+                      objectFit="cover"
+                      quality={100}
+                      className={styles.headerBg}
+                  />
+                </div>
+            </div>
+            <div className={styles.headerText}>
+              <h1>Коворкинг</h1>
+              <h3><span className={styles.semibold}>А так же:</span> свободное пространство,<br/>
+              антикафе и образовательный клуб</h3>
+              <button className={styles.buttonEnroll}><span style={{fontWeight: 600, fontSize: 16}}>Оставь заявку</span> получи 1 день бесплатно</button>
+            </div>
+            <div className={styles.headerBottomTextContainer}>
+                <h3>Шесть зон</h3>
+                <ReactSVG
+                style={{padding: "0 13px", marginTop: "28px"}}
+                src="/images/size.svg" />
+                <h2>на 400 м²</h2>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+        </Swiper>
+        </div>
+        <div className={styles.aboutContainer}>
+            <div className={styles.imageStyles} style={{width: "370px", height: "530px", marginRight: "150px"}}>
+                <Image
+                 src="/images/about.png"
+                 layout="fill"
+                 objectFit="cover"
+                 quality={100}
+                />
+            </div>
+            <div>
+            <h1 className={styles.title}>О нас</h1>
+            <p>
+            «Кто такой Джон Голт?» — место для работы, учёбы и отдыха. Наша цель — создать сообщество инициативных и талантливых людей, которые хотят творить, развиваться, помогать друг другу и быть полезными.<br/><br/>
+            Ценим уют и рабочую атмосферу: в пространстве светло и играет лёгкая музыка. Мы сами сделали столы, сварили парты для учёбного класса, смастерили из дуба деревянные светильники. Каждая вещь с историей.<br/><br/>
+            Посетители пространства проводят время с пользой: посещают лекции и мастер-классы, работают над проектами, читают и делятся идеями, общаются, играют и заводят новых друзей.
+            </p>
+            </div>
+        </div>
+        <div style={{padding: "75px 20px"}}>
+            <Workspaces/>
+        </div>
+        <div style={{padding: "75px 20px"}}>
+            <Contacts/>
+        </div>
+
+    </div>
+
+    <Events/>
+
+
+    </MainLayout>
+    )
 }
 
 export default Home
