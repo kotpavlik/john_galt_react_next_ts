@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Mousewheel, Autoplay } from 'swiper';
 import 'swiper/css';
 import styles from '../styles/home.module.css'
 import Image from 'next/image';
@@ -8,18 +8,15 @@ export const Workspaces = () => {
 
     return (
         <div className="ws_slider">
-        <h1 className={styles.titleWorkspace} >Рабочие зоны</h1>
+        <h1 className={styles.titleWorkspace} >7 рабочих зон</h1>
         <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Mousewheel]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Mousewheel, Autoplay]}
             spaceBetween={20}
             loop
             autoplay
-            autoplayTimeout={5}
             slidesPerView={4}
             mousewheel={true}
             style={{height: "450px"}}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
@@ -74,7 +71,7 @@ export const Workspaces = () => {
                 <div className={styles.slideTitle}>Офис</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide key="4">
+            <SwiperSlide key="5">
               <div >
                 <Image
                     src="/images/gallery.png"
@@ -86,7 +83,7 @@ export const Workspaces = () => {
                 <div className={styles.slideTitle}>Галерея</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide key="4">
+            <SwiperSlide key="6">
               <div >
                 <Image
                     src="/images/pinkpunk.jpg"
@@ -98,7 +95,7 @@ export const Workspaces = () => {
                 <div className={styles.slideTitle}>Магазин одежды</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide key="4">
+            <SwiperSlide key="7">
               <div >
                 <Image
                     src="/images/skyperoom.jpg"

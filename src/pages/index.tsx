@@ -5,11 +5,13 @@ import Image from 'next/image';
 import { ReactSVG } from 'react-svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { MainLayout } from '../../layouts /MainLayout';
 import { Contacts } from '../components/Contacts';
 import { Events } from '../components/Events';
 import { Workspaces } from '../components/Workspaces';
+import { Bubble } from '../components/Bubble';
+import { Rent } from '../components/Rent';
 
 
 const Home: NextPage = () => {
@@ -27,12 +29,14 @@ const Home: NextPage = () => {
         <Swiper
           className="swiper-main"
           spaceBetween={0}
+          autoplay
+          autoplayTimeout={10}
           slidesPerView={1}
           style={{height: "100vh"}}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
           pagination={pagination}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
         >
           <SwiperSlide>
             <div className={styles.headerImgContainer}>
@@ -82,18 +86,63 @@ const Home: NextPage = () => {
             </p>
             </div>
         </div>
+        <div className={styles.container}>
+            <div className={styles.bubble_container}>
+                <Bubble>Быстрый Wi-Fi (1Gbit LAN)</Bubble>
+                <Bubble>Проектор для лекций и презентаций</Bubble>
+                <Bubble>PlayStation 5</Bubble>
+                <Bubble>VR Oculus Quest 2</Bubble>
+                <Bubble>Книги для обучения</Bubble>
+                <Bubble>Мастерклассы</Bubble>
+                <Bubble>Бесплатный кофе и чай</Bubble>
+                <Bubble>Переговорная комната</Bubble>
+                <Bubble>Настольные игры</Bubble>
+                <Bubble>Микроволновка и холодильник</Bubble>
+            </div>
+        </div>
         <div style={{padding: "75px 20px"}}>
             <Workspaces/>
         </div>
-        <div style={{padding: "75px 20px"}}>
+
+        </div>
+        <div style={{padding: "75px 40px", margin: "80px 0", backgroundColor: "var(--primary)", textAlign: "center", position: "relative", overflow: "hidden"}}>
+            <h1 className={styles.title} style={{color: "var(--background)", paddingBottom: "40px"}}>Аренда помещений</h1>
+
+            <div className={styles.bg_pencil}><Image
+                src="/images/bg_pencil.png"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+            /></div>
+            <div  className={styles.container} style={{padding: "0 20px", position: "relative", borderRadius: "10px"}}>
+                <div style={{backgroundColor: "var(--background)", borderRadius: "10px", overflow: "hidden"}}>
+                    <Rent/>
+                </div>
+            </div>
+            <div className={styles.bg_flower}><Image
+                src="/images/bg_flower.png"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+            /></div>
+        </div>
+        <div className={styles.container}>
+
+        <div style={{padding: "75px 20px", height: "200px"}}>
+
+        </div>
+        <Events/>
+        <div style={{padding: "75px 20px", height: "200px"}}>
+
+        </div>
+        <div style={{padding: "75px 0px"}}>
+            <h1 className={styles.title}>Контакты</h1><br/>
             <Contacts/>
         </div>
 
+
+
     </div>
-
-    <Events/>
-
-
     </MainLayout>
     )
 }

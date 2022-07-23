@@ -27,7 +27,7 @@ export const MainLayout = ({ children, title } : propsType) => {
     return (
         <>
             <Head>
-                <title> Who is John Galt | {title}</title>
+                <title> Who is John Galt | </title>
                 <meta name="keywords" content="coworking in Minsk "/>
                 <meta name="description" content="working out in your home, fast internet and testy coffee"/>
                 <meta charSet="utf-8"/>
