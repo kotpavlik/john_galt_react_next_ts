@@ -78,6 +78,7 @@ export const Rent = () => {
                     <div className={styles.image}>
                     <Image
                       src={images[0]}
+                      alt="Большой зал"
                       layout="fill"
                       objectFit="cover"
                       quality={100}
@@ -123,6 +124,7 @@ export const Rent = () => {
                     <div className={styles.image}>
                     <Image
                       src={images[1]}
+                      alt="Кофейная зона"
                       layout="fill"
                       objectFit="cover"
                       quality={100}
@@ -169,6 +171,7 @@ export const Rent = () => {
                     <Image
                       src={images[2]}
                       layout="fill"
+                      alt="Классная комната"
                       objectFit="cover"
                       quality={100}
                      />
@@ -212,6 +215,7 @@ export const Rent = () => {
                     <div className={styles.image}>
                     <Image
                       src={images[3]}
+                      alt="Офисная комната"
                       layout="fill"
                       objectFit="cover"
                       quality={100}
@@ -257,6 +261,7 @@ export const Rent = () => {
                     <Image
                       src={images[4]}
                       layout="fill"
+                      alt="Игровая/Переговорка"
                       objectFit="cover"
                       quality={100}
                      />
@@ -300,6 +305,7 @@ export const Rent = () => {
                     <div className={styles.image}>
                     <Image
                       src={images[5]}
+                      alt="Магазин одежды"
                       layout="fill"
                       objectFit="cover"
                       quality={100}

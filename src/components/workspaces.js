@@ -26,6 +26,7 @@ export const Workspaces = () => {
                   <Image
                       src="/images/bigroom.png"
                       layout="fill"
+                      alt="Большая комната"
                       objectFit="cover"
                       quality={100}
                       className={styles.headerBg}
@@ -53,6 +54,7 @@ export const Workspaces = () => {
                     src="/images/classroom.png"
                     layout="fill"
                     objectFit="cover"
+                    alt="Классная комната"
                     quality={100}
                     className={styles.headerBg}
                 />
@@ -64,6 +66,7 @@ export const Workspaces = () => {
                 <Image
                     src="/images/office.jpg"
                     layout="fill"
+                    alt="Офисная комната"
                     objectFit="cover"
                     quality={100}
                     className={styles.headerBg}
@@ -75,6 +78,7 @@ export const Workspaces = () => {
               <div >
                 <Image
                     src="/images/gallery.png"
+                    alt="Галерея"
                     layout="fill"
                     objectFit="cover"
                     quality={100}
@@ -88,6 +92,7 @@ export const Workspaces = () => {
                 <Image
                     src="/images/pinkpunk.jpg"
                     layout="fill"
+                    alt="Магазин одежды"
                     objectFit="cover"
                     quality={100}
                     className={styles.headerBg}
@@ -101,6 +106,7 @@ export const Workspaces = () => {
                     src="/images/skyperoom.jpg"
                     layout="fill"
                     objectFit="cover"
+                    alt="Игровая/Переговорка"
                     quality={100}
                     className={styles.headerBg}
                 />

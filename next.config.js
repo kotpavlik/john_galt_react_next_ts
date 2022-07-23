@@ -14,6 +14,8 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     loader: 'default',
     path: '/_next/image',
+    loader: 'akamai',
+    path: '',
   },
   experimental: {
     images: {

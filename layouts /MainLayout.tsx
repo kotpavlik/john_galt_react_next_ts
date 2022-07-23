@@ -18,10 +18,10 @@ export const MainLayout = ({ children, title } : propsType) => {
     const lottieRef1 = useRef();
     const lottieRef2 = useRef();
     const lottieRef3 = useRef();
-    function onMouseEnter(lottieRef) {
+    function onMouseEnter(lottieRef: any) {
         lottieRef.current.goToAndPlay(0);
     }
-    function onMouseLeave(lottieRef) {
+    function onMouseLeave(lottieRef: any) {
         lottieRef.current.goToAndStop(0);
     }
     return (
@@ -36,11 +36,11 @@ export const MainLayout = ({ children, title } : propsType) => {
                 <div>
                     <div className={styles.logo_wrapper}>
                         <Image className={styles.logo} src={logo} alt="logotype" width={146} height={89}/>
-                        <div className={styles.contacts_wrapper}>
-                            <div onMouseEnter={() => onMouseEnter(lottieRef1)} onMouseLeave={() => onMouseLeave(lottieRef1)} ><Lottie  lottieRef={lottieRef1} animationData={callAnimation} loop={false} /> <Link href="/"><a> +375 44 721-00-40 </a></Link></div>
-                            <div onMouseEnter={() => onMouseEnter(lottieRef2)} onMouseLeave={() => onMouseLeave(lottieRef2)}><Lottie    lottieRef={lottieRef2}  animationData={chatAnimation} loop={false} /><Link href="/"><a> Запись на пробный день</a></Link></div>
-                            <div onMouseEnter={() => onMouseEnter(lottieRef3)} onMouseLeave={() => onMouseLeave(lottieRef3)}><Lottie    lottieRef={lottieRef3}  animationData={enrollAnimation} loop={false} /><Link href="/"><a> Связаться через мессенджер </a></Link></div>
-                        </div>
+                        {/*<div className={styles.contacts_wrapper}>
+                            <div onMouseEnter={() => onMouseEnter(lottieRef1)} onMouseLeave={() => onMouseLeave(lottieRef1)} ><Lottie lottieRef={lottieRef1} animationData={callAnimation} loop={false} /> <Link href="/"><a> +375 44 721-00-40 </a></Link></div>
+                            <div onMouseEnter={() => onMouseEnter(lottieRef2)} onMouseLeave={() => onMouseLeave(lottieRef2)}><Lottie lottieRef={lottieRef2}  animationData={chatAnimation} loop={false} /><Link href="/"><a> Запись на пробный день</a></Link></div>
+                            <div onMouseEnter={() => onMouseEnter(lottieRef3)} onMouseLeave={() => onMouseLeave(lottieRef3)}><Lottie  lottieRef={lottieRef3}  animationData={enrollAnimation} loop={false} /><Link href="/"><a> Связаться через мессенджер </a></Link></div>
+                        </div>*/}
                     </div>
                     <div className={styles.link_wrapper}>
                         <div > <Link href="/"><a> О нас</a></Link></div>

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import { NextPage } from 'next'
 import styles from '../styles/home.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ import { Bubble } from '../components/Bubble';
 import { Rent } from '../components/Rent';
 
 
-const Home: NextPage = () => {
+const Home = () => {
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {
@@ -45,6 +45,7 @@ const Home: NextPage = () => {
                       style={{borderRadius: "0 0 10px 10px"}}
                       src="/images/headerbg.png"
                       layout="fill"
+                      alt="Большая комната"
                       objectFit="cover"
                       quality={100}
                       className={styles.headerBg}
@@ -72,6 +73,7 @@ const Home: NextPage = () => {
             <div className={styles.imageStyles} style={{width: "370px", height: "530px", marginRight: "150px"}}>
                 <Image
                  src="/images/about.png"
+                 alt="О нас"
                  layout="fill"
                  objectFit="cover"
                  quality={100}
@@ -111,6 +113,7 @@ const Home: NextPage = () => {
             <div className={styles.bg_pencil}><Image
                 src="/images/bg_pencil.png"
                 layout="fill"
+                alt=""
                 objectFit="cover"
                 quality={100}
             /></div>
@@ -123,6 +126,7 @@ const Home: NextPage = () => {
                 src="/images/bg_flower.png"
                 layout="fill"
                 objectFit="cover"
+                alt=""
                 quality={100}
             /></div>
         </div>
